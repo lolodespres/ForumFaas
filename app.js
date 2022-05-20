@@ -1,14 +1,4 @@
 require("dotenv").config();
-<<<<<<< HEAD
-
-const cookieParser = require("cookie-parser");
-const express = require("express");
-const favicon = require("serve-favicon");
-const hbs = require("hbs");
-const mongoose = require("mongoose");
-const logger = require("morgan");
-const path = require("path");
-=======
 
 const cookieParser = require("cookie-parser");
 const express = require("express");
@@ -19,18 +9,13 @@ const path = require("path");
 
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
->>>>>>> master
 
 const bcrypt = require("bcrypt");
 
 /// mongoose
 const mongoose = require("mongoose");
 mongoose
-<<<<<<< HEAD
-  .connect("mongodb://localhost/forumfaas", {
-=======
   .connect(process.env.MONGODB_URI,{
->>>>>>> master
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -105,18 +90,6 @@ app.use(
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
-<<<<<<< HEAD
-app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
-
-// default value for title local
-app.locals.title = "Express - Generated with IronGenerator";
-
-const index = require("./routes/index");
-app.use("/", index);
-
-const insert = require("./routes/function");
-app.use("/function", insert);
-=======
 // app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
@@ -136,6 +109,5 @@ app.use("/user", user);
 
 const exec = require("./routes/exec");
 app.use("/exec", exec);
->>>>>>> master
 
 module.exports = app;
