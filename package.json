@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+<<<<<<< HEAD
     "abbrev": "^1.1.1",
     "accepts": "^1.3.8",
     "ansi-align": "^2.0.0",
@@ -418,6 +419,30 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lolodespres/ForumFaas/issues"
+=======
+    "@ckeditor/ckeditor5-code-block": "^27.1.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.18.3",
+    "ckeditor5": "^27.1.0",
+    "cloudinary": "^1.25.2",
+    "connect-mongo": "^4.4.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.0.0",
+    "email-validator": "^2.0.4",
+    "express": "^4.16.3",
+    "express-session": "^1.17.2",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.12.9",
+    "morgan": "^1.9.0",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "node-sass-middleware": "^0.11.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0",
+    "yup": "^0.32.9"
+>>>>>>> master
   },
   "homepage": "https://github.com/lolodespres/ForumFaas#readme"
 }

@@ -1,0 +1,149 @@
+.presentations,
+.functions,
+.answers {
+  background-color: #04819c;
+  text-align: center;
+  min-height: 400px;
+  position: relative; }
+
+.presentations > h1 {
+  text-align: left;
+  margin-left: 2em;
+  color: #e6e9ee;
+  margin-bottom: 0; }
+
+.presentations,
+.functions {
+  min-width: 50%; }
+
+.answers {
+  min-width: 90%;
+  margin: auto;
+  margin-bottom: 1em; }
+
+.first-part {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 1em auto; }
+
+.head-new {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2em;
+  align-items: flex-end; }
+
+.new {
+  margin-bottom: 0.5em; }
+
+.head-new > h1 {
+  margin-right: 2em;
+  margin-bottom: 0;
+  color: #e6e9ee; }
+
+.avatar {
+  height: 40px;
+  width: 40px; }
+
+.btn-details {
+  height: 30px; }
+
+.btn-details-fun {
+  height: 20px;
+  border-radius: 5px; }
+
+.block {
+  margin-bottom: 3.5em; }
+
+.user-block,
+.function-block,
+.answer-block {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e9ee;
+  color: #2e2b25;
+  border: 2px solid #e49906;
+  margin: 1em 2em; }
+
+.user-title,
+.function-title,
+.answer-title {
+  display: flex;
+  align-items: center; }
+
+.name {
+  flex: 1;
+  width: 7em; }
+
+.title {
+  margin: 0.5em 2em 0.5em;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+nav {
+  display: flex;
+  justify-content: center; }
+
+.pagination-users,
+.pagination-functions,
+.pagination-answers {
+  display: flex;
+  border: 1px solid #35578b;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+  width: 60%;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  margin-bottom: 1em; }
+
+.btn-less-page-users,
+.btn-less-page-functions,
+.btn-less-page-answers {
+  border-radius: 5px 0 0 5px;
+  flex: 2;
+  text-align: center; }
+
+.btn-more-page-users,
+.btn-more-page-function,
+.btn-more-page-answers {
+  border-radius: 0 5px 5px 0;
+  flex: 2; }
+
+.btn-page-users,
+.btn-page-functions,
+.btn-page-answers {
+  border-radius: 0;
+  flex: 2; }
+
+.pagination-users button,
+.pagination-function button,
+.pagination-answers button {
+  color: black;
+  transition: background-color 0.3s; }
+
+.pagination-users button.active,
+.pagination-functions button.active,
+.pagination-answers button.active {
+  background-color: #35578b;
+  color: #e49906; }
+
+.pagination-users button:hover:not(.active),
+.pagination-functions button:hover:not(.active),
+.pagination-functions button:hover:not(.active) {
+  background-color: #a3b1c2; }
+
+button :first-child {
+  margin: auto; }
+
+.description p {
+  max-width: 75%;
+  margin: auto; }
+
+/*# sourceMappingURL=presentations.css.map */

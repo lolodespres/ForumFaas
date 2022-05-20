@@ -1,0 +1,36 @@
+.function {
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+form {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(4, 129, 156, 1);
+  margin: auto;
+  min-width: 50em;
+  padding: 15px 0px;
+}
+.block-args,
+.head-function {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bolder;
+  padding: 0 0.5em;
+}
+.args-input {
+  padding-bottom: 0.4em;
+}
+.end-function {
+  font-size: x-large;
+  font-weight: bolder;
+}
+.arg {
+  width: 5em;
+}
+.formfunction{
+  max-width: 50vw;
+}

@@ -1,0 +1,35 @@
+.user-details {
+  background-color: rgba(4, 129, 156, 1);
+  min-width: 60vw;
+  text-align: center;
+  margin: auto;
+  min-height: 40vh;
+  width: max-content;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+.insert-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.5em;
+}
+.avatar {
+  margin: 0 2em;
+}
+label {
+  width: 60%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+input, textarea {
+  font-size: 1em;
+}
+form button {
+  margin: auto;
+  font-size: 1em;
+}

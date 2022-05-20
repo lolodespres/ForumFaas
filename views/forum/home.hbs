@@ -1,0 +1,153 @@
+{{#if errorMessage}}
+  <div class="error">
+    {{errorMessage}}
+  </div>
+{{/if}}
+{{#if message}}
+  <div class="message">
+    {{message}}
+  </div>
+{{/if}}
+<div class="first-part">
+<div class="presentations">
+  <h1>Présentations</h1>
+  <div class="block users">
+    {{#each users}}
+      <div class="user-block">
+        <div class="user-title">
+          <img class="title avatar" src="{{this.avatar}}" alt="avatar" />
+          <h2 class="title name">{{this.name}}</h2>
+          <img
+            class="title btn-details"
+            src="/images/userDetails.png"
+            alt="ico details"
+            data-id="{{this._id}}"
+          />
+        </div>
+        <div class="details hide" data-id="{{this._id}}">
+          <div class="activity">
+            <h3>Activités sur le forum:</h3>
+            <p>Post: {{this.nbPost}} Fonction: {{this.nbFun}}</p>
+          </div>
+          <div class="description">
+            <h3>Description:</h3>
+            <p>{{this.descriptions}}</p>
+          </div>
+          <div class="contact">
+            <h3>Contact:</h3>
+            <p>{{#if this.publicContact}} {{this.email}} {{else}}
+                Cet utilisateur ne souhaite pas divulgué son contact.{{/if}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  {{#if paginationUsers.one}}
+    <div class="pagination-users" data-nbpage="{{nbPage.users}}">
+      {{#if paginationUsers.more}}
+        <button class="btn-less-page-users">&#60&#60</button>
+      {{/if}}
+      <button class="active btn-page-users">1</button>
+      {{#if paginationUsers.two}}
+        <button class="btn-page-users">2</button>
+      {{/if}}
+      {{#if paginationUsers.tree}}
+        <button class="btn-page-users">3</button>
+      {{/if}}
+      {{#if paginationUsers.four}}
+        <button class="btn-page-users">4</button>
+      {{/if}}
+      {{#if paginationUsers.more}}
+        <button class="btn-more-page-users">&#62&#62</button>
+      {{/if}}
+
+    </div>
+  {{/if}}
+</div>
+<div class="functions">
+  <div class="head-new">
+    <h1>Fonction</h1>
+    <a href="/forum/function/new"><button class="new">New</button></a>
+  </div>
+  <div class="block funs">
+    {{#each functions}}
+      <div class="function-block">
+        <div class="function-title">
+          <img class="title avatar" src="{{this.authorData.avatar}}" alt="avatar" />
+          <h2 class="title name">{{this.name}}</h2>
+          <a href="/forum/function/{{this._id}}"><img
+              class="title btn-details-fun"
+              src="/images/details.png"
+              alt="ico details"
+            /></a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  {{#if paginationFunctions.one}}
+    <div class="pagination-functions" data-nbpage="{{nbPage.functions}}">
+      {{#if paginationFunctions.more}}
+        <button class="btn-less-page-functions">&#60&#60</button>
+      {{/if}}
+      <button class="active btn-page-functions">1</button>
+      {{#if paginationFunctions.two}}
+        <button class="btn-page-functions">2</button>
+      {{/if}}
+      {{#if paginationFunctions.tree}}
+        <button class="btn-page-functions">3</button>
+      {{/if}}
+      {{#if paginationFunctions.four}}
+        <button class="btn-page-functions">4</button>
+      {{/if}}
+      {{#if paginationFunctions.more}}
+        <button class="btn-more-page-functions">&#62&#62</button>
+      {{/if}}
+
+    </div>
+  {{/if}}
+</div>
+</div>
+{{! bloc answer }}
+<div class="answers">
+  <div class="head-new">
+    <h1>Question</h1>
+    <a href="/forum/answer/new"><button class="new">New</button></a>
+  </div>
+  <div class="block answ">
+  {{#each posts}}
+  <div class="answer-block">
+        <div class="answer-title">
+          <img class="title avatar" src="{{this.authorData.avatar}}" alt="avatar" />
+          <h2 class="title name">{{this.title}}</h2>
+          <a href="/forum/answer/{{this._id}}"><img
+              class="title btn-details-fun"
+              src="/images/details.png"
+              alt="ico details"
+            /></a>
+        </div>
+      </div>
+  {{/each}}
+  </div>
+  {{#if paginationAnswers.one}}
+    <div class="pagination-answers" data-nbpage="{{nbPage.posts}}">
+      {{#if paginationAnswers.more}}
+        <button class="btn-less-page-answers">&#60&#60</button>
+      {{/if}}
+      <button class="active btn-page-answers">1</button>
+      {{#if paginationAnswers.two}}
+        <button class="btn-page-answers">2</button>
+      {{/if}}
+      {{#if paginationAnswers.tree}}
+        <button class="btn-page-answers">3</button>
+      {{/if}}
+      {{#if paginationAnswers.four}}
+        <button class="btn-page-answers">4</button>
+      {{/if}}
+      {{#if paginationAnswers.more}}
+        <button class="btn-more-page-answers">&#62&#62</button>
+      {{/if}}
+
+    </div>
+  {{/if}}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

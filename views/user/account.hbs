@@ -1,0 +1,37 @@
+<div class="account">
+  <div class="user-infos">
+    <div class="user-infos-sub">
+    <img class="avatar" src="{{avatar}}" alt="avatar" />
+    <div class="user-infos-text">
+      <p class="user-name">{{name}}</p>
+      <p class="user-mail">{{email}}</p>
+      {{#if description}}
+        <p class="user-description">{{description}}</p>
+      {{/if}}
+    </div>
+    <a class="user-ico" href="/user/edit"><img src="/images/editaccount.png" alt="icon edit" /></a>
+    <img class="user-ico" id="btn-delete" src="/images/deleteaccount.png" alt="icon delete" />
+    <div id="delete-modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Étes vous sur de vouloir supprimer votre compte ?</p>
+        <a href="/user/delete/{{id}}"><button>Confirmer</button></a>
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+  <div class="user-activity">
+    <div class="activity-left">
+      <h4>Nombre de post: {{nbPost}}</h4>
+      <h4>Nombre de fonction: {{nbFunction}}</h4>
+    </div>
+    <div class="activity-rigth">
+      <h4>Membre depuis le: {{creationDate}}</h4>
+      <h4>Status: {{status}}</h4>
+    </div>
+  </div>
+</div>
