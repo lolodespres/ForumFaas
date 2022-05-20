@@ -1,0 +1,17 @@
+header {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 8em;
+    background-color: #128faa;
+}
+.logo {
+	display: block;
+	height: 40px;
+    margin: 0.5em;
+}
+header nav {
+    display: flex;
+    justify-content: space-around;
+}
